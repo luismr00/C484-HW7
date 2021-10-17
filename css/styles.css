@@ -1,5 +1,11 @@
-/* IGNORED THE SPACING FOR THIS ASSIGNMENT AND WILL TAKE CARE OF IT ON HW7*/
-/* ALL TEXT ELEMENTS HAVE BEEN DEFAULTED TO HAVE A 0 MARGIN FOR NOW */
+/* border box fix */
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
 
 /* Color Palette */
 
@@ -30,12 +36,11 @@ body {
 	margin: 0 auto;
 }
 
-
-p, h1, h2, h3 {
+h1, h2, h3 {
 	margin: 0;
 }
 
-p, li {
+p, li, a {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	/* color: white; */
 }
@@ -43,6 +48,7 @@ p, li {
 h1 {
 	font-family: 'Scheherazade New', serif;
 	font-size: 64px;
+	margin: 0;
 	/* Adjust height to approx. 96px */
 	height: 96px;
 }
@@ -52,12 +58,21 @@ h2 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 36px;
 	font-weight: 600;
+	/* clear: both; */
 }
 
 h3 {
 	font-family: 'Yanone Kaffeesatz', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
+}
+
+.content-wrap {
+	max-width: 950px;
+	margin: 0 auto;
+	padding: 50px;
+	overflow: hidden;
+	/* clear: both; */
 }
 
 /* Header & Footer 
@@ -67,21 +82,59 @@ header, footer {
 	color: white;
 }
 
-.profile-pic {
+.profile-img {
 	border-radius: 50%;
-	width: 200px;
+	/* width: 300px;
+	float: left;
+	margin-right: 30px; */
 }
 
 header h2 {
-	font-size: 48px;
+	font-size: 30px;
 	font-weight: 300;
 }
 
+.column-narrow {
+	width: 30%;
+	float: left;
+	padding-right: 3%;
+	min-height: 175px;
+}
 
+.column-wide {
+	width: 70%;
+	float: left;
+	min-height: 225px;
+}
+
+footer {
+	text-align: center;
+}
+
+.contact-info a {	
+	padding: 10px;
+	color: white;
+	display: inline-block;
+}
+
+/* Extra styling below to align the text content well. Uncomment if you would like to see the webpage without them. */
 
 /* Work Experience
 ------------------------------------*/
 
+.work-title p, .work-description p {
+	margin: 0;
+}
+
+/* Applies to education styling section too */
+.section-title {
+	margin-bottom: 20px;
+}
+
 
 /* Education
 ------------------------------------*/
+
+.degree {
+	margin: 0;
+}
